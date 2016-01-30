@@ -6,11 +6,21 @@ var SongModel = Backbone.Model.extend({
     this.trigger('play', this);
   },
 
-  add: function() {
-    this.trigger('add', this);
-  }
+  enqueue: function() {
+    this.trigger('enqueue', this);
+  },
 
-  //add a playfirst method
-    //first in songqueue plays...
+  dequeue: function() {
+    this.trigger('dequeue', this);
+  },
+
+  ended: function() {
+    this.trigger('ended', this);
+  },
+
+  playFirst: function() {
+    // console.log(this.get('songQueue')[0])
+    this.trigger('playFirst', this)
+  }
 
 });
