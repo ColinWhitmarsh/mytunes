@@ -19,7 +19,6 @@ var SongModel = Backbone.Model.extend({
   },
 
   playFirst: function() {
-    // console.log(this.get('songQueue')[0])
     this.trigger('playFirst', this)
   }
 
